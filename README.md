@@ -1,72 +1,53 @@
-# [Your Project Title — Make It Compelling]
-<!-- Example: "Predicting Hotel Cancellations: A Data-Driven Approach to Revenue Protection" -->
-<!-- Example: "Who Will Buy? Predicting Online Shopper Conversions" -->
-<!-- Example: "Smarter Outreach: Predicting Bank Marketing Campaign Success" -->
+# Predicting Hotel Booking Cancellations: A Data-Driven Approach to Revenue Protection
 
-**One-line hook:** [One sentence that captures what this project does and why it matters.]
+**One-line hook:** Using machine learning to predict which hotel bookings are most likely to cancel, helping hotels better manage revenue and reduce last-minute losses.
 
 ---
 
 ## The Business Problem
 
-[2-3 sentences. What is the company struggling with? Why does it matter financially or
-operationally? What is at stake if they do nothing?]
+Hotel cancellations create major uncertainty for revenue management. When guests cancel their reservations, hotels lose potential revenue and may struggle to fill empty rooms at the last minute. If hotels can identify bookings that are likely to cancel in advance, they can adjust overbooking strategies, send reminder emails, or offer incentives to reduce cancellations.
 
-<!--
-Tip: Lead with the pain, not the data.
-Instead of "This project analyzes a dataset of 119K hotel bookings..."
-Try: "A Portuguese hotel chain loses an estimated millions annually to last-minute cancellations..."
--->
+---
 
 ## The Data
 
-[2-3 sentences. Where does the data come from? How many records? What time period?
-What kinds of information does it contain — in plain English, not column names?]
+This project analyzes a hotel booking dataset containing over 119,000 reservation records from two different hotels. The dataset includes information such as how far in advance guests booked, the market segment they belong to, the type of deposit required, and the average daily rate of the booking. These features help reveal patterns that influence whether a booking is eventually canceled.
 
-<!--
-Tip: Translate technical details into human terms.
-Instead of "The dataset has 32 features and 119,390 rows..."
-Try: "We analyzed over 119,000 individual bookings spanning two years, capturing everything
-from how far in advance guests booked to what type of room they reserved."
--->
+---
 
 ## Key Discoveries
 
-- **[Finding 1 headline]:** [1-2 sentences explaining what you found and why it matters]
-- **[Finding 2 headline]:** [1-2 sentences]
-- **[Finding 3 headline]:** [1-2 sentences]
-- **[Finding 4 headline (optional)]:** [1-2 sentences]
+- **Long lead-time bookings cancel more often:** Guests who book far in advance are significantly more likely to cancel than those who book closer to their stay date.
+- **Cancellation rates vary across market segments:** Some market segments show noticeably higher cancellation rates, suggesting that customer type strongly influences booking reliability.
+- **Deposit policies influence behavior:** Bookings with certain deposit types tend to have lower cancellation rates, indicating that financial commitment affects guest decisions.
+- **Pricing may affect cancellation risk:** Average daily rate (ADR) appears to have some relationship with cancellation patterns, suggesting that price sensitivity may play a role.
 
-<!--
-Tip: Write findings as "headlines" a newspaper editor would approve.
-Good: "Guests who book 6+ months ahead cancel at nearly 3x the rate of last-minute bookers"
-Bad: "Lead time has a positive correlation with cancellation"
--->
+---
 
 ## Visualizing the Story
 
-<!-- Embed your most compelling chart. Pick the ONE visual that best captures your main finding. -->
+![Cancellation Rate by Market Segment](cancellation.png)
 
-![Description of your chart](your_chart_filename.png)
+*This chart shows that cancellation rates vary significantly across different market segments, highlighting how customer type can strongly influence booking reliability.*
 
-*[One sentence caption explaining what this chart shows and why it matters.]*
+---
 
 ## Prediction Model
 
-[2-3 sentences. How well can we predict the outcome? Translate accuracy into real-world terms.]
+A **Gaussian Naive Bayes model** was trained to predict whether a hotel booking would be canceled. The model achieved approximately **72% accuracy** on the test dataset. In practical terms, this means the model can correctly identify a large portion of bookings that are likely to cancel, giving hotel managers an opportunity to take proactive actions before revenue is lost.
 
-<!--
-Tip: Translate model metrics into business impact.
-Instead of "The model achieved 78% accuracy..."
-Try: "Our model correctly flags 8 out of 10 at-risk bookings, giving the hotel front desk team
-enough lead time to proactively reach out and offer flexible rebooking options."
--->
+---
 
 ## Recommendations
 
-1. **[Action]:** [Why this action, based on your data. Estimated impact.]
-2. **[Action]:** [Why this action, based on your data. Estimated impact.]
-3. **[Action]:** [Why this action, based on your data. Estimated impact.]
+1. **Monitor high lead-time bookings more closely:** Since bookings made far in advance show higher cancellation rates, hotels should track these reservations and send reminder communications as the stay date approaches.
+
+2. **Adjust overbooking strategies using predictions:** By identifying bookings with higher cancellation probability, hotels can make smarter overbooking decisions and reduce the risk of empty rooms.
+
+3. **Target high-risk segments with retention strategies:** Certain market segments show higher cancellation behavior, so targeted incentives or flexible rebooking options may help reduce cancellations.
+
+---
 
 ## Tools & Techniques
 
@@ -74,8 +55,7 @@ Python | Pandas | Scikit-Learn | Matplotlib | Seaborn | Gaussian Naive Bayes | G
 
 ---
 
-*This project was completed as part of ISOM 835: Predictive Analytics at Suffolk University's
-Sawyer Business School.*
+*This project was completed as part of ISOM 835: Predictive Analytics at Suffolk University's Sawyer Business School.*
 
 
 ![Cancellation Chart](cancellation.png)
